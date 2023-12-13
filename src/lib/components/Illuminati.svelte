@@ -4,7 +4,6 @@ export let fillColor;
  
 </script>
 
-
 <svg
 	xmlns="http://www.w3.org/2000/svg"
 	xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -114,6 +113,7 @@ export let fillColor;
 	/></svg
 >
 
+
 <style>
 	svg {
 		position: absolute;
@@ -122,5 +122,6 @@ export let fillColor;
 		place-items: center;
 		width: 7em;
         fill: var(--fill-color);
+        transform: translateY(.8em);
 	}
 </style>
