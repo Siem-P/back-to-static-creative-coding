@@ -1,0 +1,10 @@
+
+
+
+.single-grid {
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    background-color: #051c2c;
+}
