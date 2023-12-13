@@ -1,15 +1,31 @@
 body {
   height: 100dvh;
   background-color: #051c2c;
+  display: grid;
+  place-content: center;
+  place-items: center;
 }
 
 section {
   display: grid;
   place-content: center;
   place-items: center;
-  width: 100%;
-  height: 100%;
+  width: 30em;
 }
+
+img {
+	position: absolute;
+	display: grid;
+  place-content: center;
+  place-items: center;
+
+  width: 7em;
+  
+}
+
+
+
+
 
 div {
   grid-column-start: 1;
@@ -20,7 +36,7 @@ div {
   width: var(--width, 15em);
   aspect-ratio: 1;
 
-  background-color: #fff03;
+  background-color: #ffffff00;
 
   border-radius: 50%;
 
