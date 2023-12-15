@@ -6,25 +6,32 @@
 
 	onMount(() => {
 
-        let allDivs = document.querySelectorAll('div')
+        let allDivs = document.querySelectorAll("section > div")
+        console.log(allDivs)
 
        // give allDivs a class 
         allDivs.forEach(element => {
-            element.classList.add('shrink')
+            element.addEventListener("animationend", shrinkHandler);
         });
         
-		window.addEventListener('mousedown', function () {
+		document.addEventListener('mousedown', function () {
 			interactionColor = 'fill: red'
             allDivs.forEach(element => {
                 element.classList.add('shrink')
             });
-            console.log(div)
-		});
-
-		window.addEventListener('mouseup', function () {
-			interactionColor = 'fill: #eeebe3'
             
 		});
+
+		document.addEventListener('mouseup', function () {
+			interactionColor = 'fill: #eeebe3'
+          
+		});
+
+        function shrinkHandler() {
+            allDivs.forEach(element => {
+                // element.classList.toggle('shrink')
+            });
+        }
 	});
 </script>
 
@@ -67,24 +74,25 @@
 		display: grid;
 		justify-items: center;
 
-		
+
 		animation: rotate var(--speed, 1s) linear infinite;
 	}
 
     /* Class to use for interaction on mousedown */
     .shrink {
-        animation-iteration-count: 1;
-        animation: shrink 1s cubic-bezier(0.755, 0.050, 0.855, 0.060);
+        animation: shrink 1s cubic-bezier(0.755, 0.050, 0.855, 0.060) 1;
+        /* transition: ease 1s;
+        transform: scale(0.3); */
     }
 
 
 	/* On hover, the pre set scale is transitioned to. */
-	section:hover div {
+	/* section:hover div {
 		animation: rotate var(--speed, 1s) linear infinite;
 	    animation: shrink 3s cubic-bezier(0.755, 0.050, 0.855, 0.060) 1;
 		animation-fill-mode: forwards;
 		
-	}
+	} */
     /* Rotate animation */
 	@keyframes rotate {
 		100% {
@@ -117,7 +125,6 @@
 
     /* Create the trail effect */
 	div::before {
-        
 		background-image: conic-gradient(from var(--line-length-from, -30deg), transparent, currentcolor var(--line-length-to, 30deg), transparent 0);
 
 		mask: radial-gradient(closest-side circle, transparent calc(100% - 0.3em), red 0);
@@ -169,7 +176,6 @@
 		--width: 19em;
 
 		color: brown;
-
 	}
 
 	div:nth-of-type(4) {
@@ -236,7 +242,7 @@
 		--speed: 5.7s;
 		--width: 33em;
 
-		color: #ffd639;
+		color: #EEE2DE;
 
         --line-length-from: -30deg;
         --line-length-to: 30deg;

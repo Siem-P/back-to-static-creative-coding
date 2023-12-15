@@ -124,7 +124,7 @@ export let fillColor;
 		width: 5em;
         fill: var(--fill-color);
         transform: translateY(.8em);
-		animation: fadeIn 1s ease;
+		animation: fadeIn 1.5s ease;
 		animation-fill-mode: forwards;
 	}
 
