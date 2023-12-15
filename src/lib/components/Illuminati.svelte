@@ -120,8 +120,17 @@ export let fillColor;
 		display: grid;
 		place-content: center;
 		place-items: center;
-		width: 7em;
+		opacity: 0;
+		width: 5em;
         fill: var(--fill-color);
         transform: translateY(.8em);
+		animation: fadeIn 1s ease;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fadeIn {
+		100% { 
+			opacity: 1;
+		}
 	}
 </style>
