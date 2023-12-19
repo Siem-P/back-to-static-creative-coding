@@ -128,7 +128,7 @@
 		background-image: conic-gradient(from var(--line-length-from, -30deg), transparent, currentcolor var(--line-length-to, 30deg), transparent 0);
 
 		mask: radial-gradient(closest-side circle, transparent calc(100% - 0.3em), red 0);
-	}
+	} 
 
 	div::after {
 		position: absolute;

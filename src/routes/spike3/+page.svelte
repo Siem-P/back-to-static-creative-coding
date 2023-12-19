@@ -3,7 +3,7 @@
 
 <section class="container">
     <div class="sun"></div>
-    <div class="sun"></div> 
+    <!-- <div class="sun"></div>  -->
     <div class="wave"></div>
     <div class="wave"></div>
     <div class="wave"></div>
@@ -44,13 +44,35 @@
         border-radius: 50%;
         width: 10em;
         
-       top: 30%;
+       top: calc(40% - 10em);
        background-clip: border-box;
 
         /* Wont work because the image is loaded in through background-image */
-        /* mix-blend-mode: color-burn; */
+        /* mix-blend-mode: color-burn; */ 
+    }
 
+    .sun::before, .sun::after {
+        content: '';
+        /* top: calc(25% + 11em); */
+        transform: rotatex(180deg) translatey(15px); 
+        mask-image: linear-gradient(transparent 70%, white 90%);
+
+        border-radius: inherit;
+        display: block;
+
+    }
+
+    .sun::before {
+        background-image: linear-gradient(to top, rgba(220, 236, 5, 0.837), rgb(237, 237, 57)), url(/noise.png);
         
+    }
+
+    .sun::after {
+        position: relative;
+        width: inherit;
+        height: 100%;
+        background-image: inherit;
+        top: 11em;
     }
 
     .wave {
@@ -64,35 +86,31 @@
         height: var(--wave-height, 5em);
     }
 
-    section :nth-child(2) {
-        top: calc(30% + 11em);
-        transform: rotatex(180deg) translatey(15px); 
-        mask-image: linear-gradient(transparent 80%, white 90%);
-    }
+    
    
-    div.wave:nth-of-type(3) {
+    div.wave:nth-of-type(2) {
         --wave-height: calc(100vh - 60%);
         --to-where: bottom
     }
 
+    div.wave:nth-of-type(3) {
+        --wave-height: calc(100vh - 97%);
+    }
     div.wave:nth-of-type(4) {
-        --wave-height: 3.5em;
+        --wave-height: calc(100vh - 95%);
     }
     div.wave:nth-of-type(5) {
-        --wave-height: 4.5em;
+        --wave-height: calc(100vh - 93%);
     }
     div.wave:nth-of-type(6) {
-        --wave-height: 5.5em;
+        --wave-height: calc(100vh - 91%);
     }
     div.wave:nth-of-type(7) {
-        --wave-height:  6.5em;
-    }
-    div.wave:nth-of-type(8) {
-        --wave-height: 9em;
+        --wave-height: calc(100vh - 88%);
     }
 
-    div.wave:nth-of-type(9) {
-        --wave-height: 11em;
+    div.wave:nth-of-type(8) {
+        --wave-height: calc(100vh - 78%);
     }
 
 
