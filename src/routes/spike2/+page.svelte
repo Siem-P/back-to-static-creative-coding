@@ -34,7 +34,7 @@
         position: absolute;
         aspect-ratio: 1;        
         
-        background-image: linear-gradient(to top, rgba(220, 236, 5, 0.837), rgb(237, 237, 57)), url(./noise.png);
+        background-image: linear-gradient(to top, rgba(220, 236, 5, 0.837), rgb(237, 237, 57)), url(/noise.png);
         background-size: cover, contain;
         background-position: center, right bottom;
         background-repeat: no-repeat, no-repeat;
@@ -53,7 +53,7 @@
 
     .wave {
         display: flex;
-        background-image: linear-gradient(to var(--to-where, top), rgb(4, 208, 253), rgb(97, 255, 252) 60%), url(./noise.png);
+        background-image: linear-gradient(to var(--to-where, top), rgb(4, 208, 253), rgb(97, 255, 252) 60%), url(/noise.png);
         background-size: cover, contain;
         background-position: center, right bottom;
         background-blend-mode: color-burn;
