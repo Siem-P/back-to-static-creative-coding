@@ -3,6 +3,7 @@
 
 <section class="container">
     <div class="sun"></div>
+    <div class="sun"></div> 
     <div class="wave"></div>
     <div class="wave"></div>
     <div class="wave"></div>
@@ -44,6 +45,7 @@
         width: 10em;
         
        top: 30%;
+       background-clip: border-box;
 
         /* Wont work because the image is loaded in through background-image */
         /* mix-blend-mode: color-burn; */
@@ -62,30 +64,34 @@
         height: var(--wave-height, 5em);
     }
 
+    section :nth-child(2) {
+        top: calc(30% + 11em);
+        transform: rotatex(180deg) translatey(15px); 
+        mask-image: linear-gradient(transparent 80%, white 90%);
+    }
    
-    div:nth-of-type(2) {
-        --wave-height: 28em;
+    div.wave:nth-of-type(3) {
+        --wave-height: calc(100vh - 60%);
         --to-where: bottom
     }
 
-    div.wave:nth-of-type(3) {
+    div.wave:nth-of-type(4) {
         --wave-height: 3.5em;
     }
-
-    div:nth-of-type(4) {
+    div.wave:nth-of-type(5) {
         --wave-height: 4.5em;
     }
-    div:nth-of-type(5) {
+    div.wave:nth-of-type(6) {
         --wave-height: 5.5em;
     }
-    div:nth-of-type(6) {
+    div.wave:nth-of-type(7) {
         --wave-height:  6.5em;
     }
-    div:nth-of-type(7) {
+    div.wave:nth-of-type(8) {
         --wave-height: 9em;
     }
 
-    div:nth-of-type(8) {
+    div.wave:nth-of-type(9) {
         --wave-height: 11em;
     }
 
